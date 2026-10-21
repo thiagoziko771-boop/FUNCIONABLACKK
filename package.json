@@ -11,5 +11,8 @@
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.104.1",
     "dotenv": "^16.6.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
   }
 }
