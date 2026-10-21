@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "functions": {
+    "functions/**/*.js": {
+      "runtime": "nodejs18.x",
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/functions/$1.js"
+    }
+  ],
+  "env": {
+    "BLACKCAT_API_KEY": "@blackcat_api_key",
+    "BLACKCAT_PUBLIC_KEY": "@blackcat_public_key",
+    "NEXT_PUBLIC_SUPABASE_URL": "@supabase_url",
+    "SUPABASE_SERVICE_ROLE_KEY": "@supabase_key",
+    "UTMIFY_TOKEN": "@utmify_token"
+  }
+}
