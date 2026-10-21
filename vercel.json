@@ -1,38 +1,11 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "functions": {
-    "functions/pix-blackcat.js": {
-      "runtime": "nodejs18.x"
-    },
-    "functions/check-payment-blackcat.js": {
-      "runtime": "nodejs18.x"
-    },
-    "functions/webhook-blackcat.js": {
-      "runtime": "nodejs18.x"
-    }
-  },
-  "routes": [
+  "buildCommand": "echo 'Build complete'",
+  "outputDirectory": ".",
+  "rewrites": [
     {
-      "src": "/api/pix-blackcat",
-      "dest": "/functions/pix-blackcat.js"
-    },
-    {
-      "src": "/api/check-payment-blackcat",
-      "dest": "/functions/check-payment-blackcat.js"
-    },
-    {
-      "src": "/api/webhook-blackcat",
-      "dest": "/functions/webhook-blackcat.js"
-    },
-    {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
