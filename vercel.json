@@ -1,20 +1,31 @@
 {
   "version": 2,
   "public": true,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "functions": {
+    "functions/pix-blackcat.js": {
+      "runtime": "nodejs18.x"
     },
-    {
-      "src": "functions/**/*.js",
-      "use": "@vercel/node"
+    "functions/check-payment-blackcat.js": {
+      "runtime": "nodejs18.x"
+    },
+    "functions/webhook-blackcat.js": {
+      "runtime": "nodejs18.x"
     }
-  ],
+  },
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "/functions/$1.js"
+      "src": "/api/pix-blackcat",
+      "dest": "/functions/pix-blackcat.js"
+    },
+    {
+      "src": "/api/check-payment-blackcat",
+      "dest": "/functions/check-payment-blackcat.js"
+    },
+    {
+      "src": "/api/webhook-blackcat",
+      "dest": "/functions/webhook-blackcat.js"
     },
     {
       "src": "/assets/(.*)",

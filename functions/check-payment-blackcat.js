@@ -3,7 +3,7 @@ const credentials = require("./credentials");
 
 // Configuração Blackcat
 const BLACKCAT_BASE = "https://api.blackcatoficial.com/api";
-const BLACKCAT_API_KEY = process.env.BLACKCAT_API_KEY || "sk_live_xxxxx";
+const BLACKCAT_API_KEY = process.env.BLACKCAT_API_KEY;
 
 function jsonResponse(statusCode, body) {
   return {
