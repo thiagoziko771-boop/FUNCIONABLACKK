@@ -1,0 +1,51 @@
+============================================
+     INSTRUÇÕES FINAIS PARA VERCEL
+============================================
+
+✅ O CÓDIGO ESTÁ CERTO E FOI PARA GITHUB
+
+Agora você precisa fazer 3 passos:
+
+1️⃣ VARIÁVEL DE AMBIENTE
+   
+   Vá em: https://vercel.com/dashboard
+   
+   → Clique no projeto: funcionablackk-3q73
+   → Clique em: Settings
+   → Clique em: Environment Variables
+   → Clique em: Add New
+   
+   Coloque exatamente:
+   Name:  BLACKCAT_API_KEY
+   Value: (copie a chave do seu arquivo .env local)
+   
+   → Selecione: Production, Preview, Development
+   → Clique: Add
+
+2️⃣ AGUARDE 2-3 MINUTOS
+   
+   A Vercel vai:
+   - Detectar o novo push
+   - Instalar dependências
+   - Fazer rebuild
+   - Deploy automático
+
+3️⃣ TESTE
+   
+   Abra: https://funcionablackk-3q73.vercel.app
+   
+   Se funcionar:
+   ✅ Página carrega
+   ✅ Sem erro 404
+   ✅ Console do navegador limpo
+   
+   Se não funcionar:
+   - Abra DevTools (F12)
+   - Console
+   - Me mande o erro que aparecer
+
+============================================
+Commit no GitHub: 088887c
+Branch: master
+Status: ✅ PRONTO PARA DEPLOY
+============================================
